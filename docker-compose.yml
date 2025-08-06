@@ -6,8 +6,8 @@ services:
     restart: always
     environment:
       - SECRET_KEY=AAAAAAAAAAAAAAAAAAAAAAAA
-      - DB_USER=admin
-      - DB_PASSWORD=admin123
+      - DB_USER=
+      - DB_PASSWORD=
       - DB_NAME=araba_kiralama
       - DB_HOST=db
     ports:
@@ -24,10 +24,10 @@ services:
     ports:
       - "3306:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: Rp123456
+      MYSQL_ROOT_PASSWORD:
       MYSQL_DATABASE: araba_kiralama
-      MYSQL_USER: admin
-      MYSQL_PASSWORD: admin123
+      MYSQL_USER: 
+      MYSQL_PASSWORD: 
     volumes:
     - mysql-data:/var/lib/mysql
     networks:
@@ -38,7 +38,7 @@ services:
     ports:
       - "80:80"
     environment:
-      DOMAIN_NAME: techprodevops.com
+      DOMAIN_NAME: .com
     depends_on:
       - app
     restart: always
